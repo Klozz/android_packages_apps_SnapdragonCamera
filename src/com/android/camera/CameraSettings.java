@@ -275,7 +275,8 @@ public class CameraSettings {
         //video qualities
         VIDEO_QUALITY_TABLE.put("4096x2160", CamcorderProfile.QUALITY_4kDCI);
         VIDEO_QUALITY_TABLE.put("3840x2160", CamcorderProfile.QUALITY_2160P);
-        VIDEO_QUALITY_TABLE.put("2560x1440", CamcorderProfile.QUALITY_1440P);
+// error, mr. scott
+//        VIDEO_QUALITY_TABLE.put("2560x1440", CamcorderProfile.QUALITY_1440P);
         VIDEO_QUALITY_TABLE.put("1920x1080", CamcorderProfile.QUALITY_1080P);
         VIDEO_QUALITY_TABLE.put("1280x720",  CamcorderProfile.QUALITY_720P);
         VIDEO_QUALITY_TABLE.put("720x480",   CamcorderProfile.QUALITY_480P);
@@ -1176,11 +1177,12 @@ public class CameraSettings {
               supported.add(Integer.toString(CamcorderProfile.QUALITY_2160P));
            }
         }
-        if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_1440P)) {
+/*        if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_1440P)) {
            if (checkSupportedVideoQuality(parameters,2560,1440)){
               supported.add(Integer.toString(CamcorderProfile.QUALITY_1440P));
            }
         }
+*/
         if (CamcorderProfile.hasProfile(cameraId, CamcorderProfile.QUALITY_1080P)) {
            if (checkSupportedVideoQuality(parameters,1920,1080)){
               supported.add(Integer.toString(CamcorderProfile.QUALITY_1080P));

@@ -913,11 +913,11 @@ public class VideoModule implements CameraModule,
         mCaptureTimeLapse = (mTimeBetweenTimeLapseFrameCaptureMs != 0);
         // TODO: This should be checked instead directly +1000.
         if (mCaptureTimeLapse) {
-            if (quality == CamcorderProfile.QUALITY_1440P) {
+/*            if (quality == CamcorderProfile.QUALITY_1440P) {
                 quality = CamcorderProfile.QUALITY_TIME_LAPSE_1440P;
             } else {
-                quality += 1000;
-            }
+*/                quality += 1000;
+//            }
         }
         mUnsupportedProfile = false;
         boolean hasProfile = CamcorderProfile.hasProfile(mCameraId, quality);
